@@ -3,47 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>تحميل تطبيق تحدي الويب</title>
+  <title>تطبيق تحدي الويب | اختبر مهاراتك في HTML وCSS</title>
+
+  <!-- تحسين محركات البحث -->
+  <meta name="description" content="حمّل تطبيق تحدي الويب واختبر مهاراتك في HTML وCSS من خلال أسئلة تفاعلية بصيغة صح/خطأ واختيار من متعدد. يدعم اللغة العربية والوضع الليلي." />
+  <meta name="keywords" content="تطبيق برمجة, HTML, CSS, تعليم البرمجة, تحدي الويب, اختبارات تفاعلية, تعلم تصميم المواقع, Flutter, عيسى شايع" />
+  <meta name="author" content="عيسى إبراهيم شايع" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="تطبيق تحدي الويب | اختبر مهاراتك البرمجية" />
+  <meta property="og:description" content="تطبيق عربي تعليمي يقدم اختبارات HTML وCSS بواجهة أنيقة وتفاعلية." />
+  <meta property="og:image" content="https://img.icons8.com/color/96/000000/source-code.png" />
+  <meta property="og:url" content="https://eissashaya.github.io/eissaa/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="تطبيق تحدي الويب | اختبر مهاراتك في HTML وCSS" />
+  <meta name="twitter:description" content="جرب مهاراتك البرمجية عبر اختبارات ممتعة بتطبيق تحدي الويب." />
+  <meta name="twitter:image" content="https://img.icons8.com/color/96/000000/source-code.png" />
+
+  <!-- الخط -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
+  <!-- أيقونة التبويب -->
+  <link rel="icon" href="https://img.icons8.com/color/48/000000/source-code.png" type="image/png">
+
   <style>
     body {
-      font-family: 'Cairo', 'Tajawal', 'Arial', sans-serif;
-      background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
-      min-height: 100vh;
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(135deg, #e0eafc 0%, #f7fafd 50%, #d2f1e4 100%);
       margin: 0;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
+      min-height: 100vh;
       direction: rtl;
-      overflow-x: hidden;
+      transition: background 0.5s;
     }
 
     .container {
-      background: rgba(255,255,255,0.85);
-      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.13);
-      border-radius: 0;
-      padding: 56px 24px 44px 24px;
-      width: 100vw;
-      min-height: 100vh;
+      background: rgba(255,255,255,0.92);
+      padding: 56px 28px 40px 28px;
+      border-radius: 22px;
+      box-shadow: 0 8px 32px rgba(40, 167, 69, 0.10), 0 1.5px 8px rgba(0,0,0,0.04);
+      width: 95%;
+      max-width: 520px;
       text-align: center;
-      backdrop-filter: blur(7px) saturate(120%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      backdrop-filter: blur(10px) saturate(120%);
+      margin-top: 48px;
       animation: fadeIn 1.2s ease both;
     }
 
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(40px) scale(0.98); }
-      100% { opacity: 1; transform: none; }
-    }
-
     .app-icon {
-      width: 72px;
-      height: 72px;
+      width: 84px;
+      height: 84px;
       margin-bottom: 18px;
-      border-radius: 16px;
-      box-shadow: 0 2px 12px rgba(40,167,69,0.13);
+      border-radius: 18px;
+      box-shadow: 0 4px 18px #28a74522;
       object-fit: cover;
       background: #e9f7ef;
       border: 2.5px solid #28a74522;
@@ -57,33 +74,35 @@
 
     h1 {
       color: #28a745;
-      font-size: 2.25rem;
+      font-size: 2.3rem;
       margin-bottom: 14px;
       font-weight: 800;
       text-shadow: 0 2px 8px #28a74511;
+      letter-spacing: 0.5px;
     }
 
     p {
       color: #444;
-      font-size: 1.1rem;
-      margin-bottom: 18px;
+      font-size: 1.12rem;
       line-height: 1.9;
+      margin-bottom: 16px;
     }
 
     .description {
       background: #f3f6fa;
-      border-radius: 10px;
-      padding: 14px;
-      font-size: 0.99rem;
-      margin-bottom: 16px;
+      border-radius: 12px;
+      padding: 16px 10px 10px 10px;
+      margin-bottom: 18px;
       color: #333;
+      border: none;
+      box-shadow: 0 1.5px 8px #28a7450a;
     }
 
     .btn-download {
       display: inline-block;
-      margin-top: 20px;
-      padding: 14px 32px;
-      font-size: 1.1rem;
+      margin-top: 18px;
+      padding: 14px 36px;
+      font-size: 1.13rem;
       font-weight: bold;
       color: #fff;
       background: linear-gradient(90deg, #28a745 60%, #218838 100%);
@@ -117,15 +136,15 @@
     }
 
     .file-size {
-      margin-top: 32px;
+      margin-top: 28px;
       color: #6c757d;
-      font-size: 0.95rem;
+      font-size: 0.97rem;
     }
 
     .author-info {
-      margin-top: 48px;
+      margin-top: 44px;
       color: #777;
-      font-size: 0.95rem;
+      font-size: 0.97rem;
       line-height: 1.8;
       border-top: 1px solid #ddd;
       padding-top: 16px;
@@ -143,25 +162,45 @@
     .author-info a:hover {
       text-decoration: underline;
     }
+
+    .icon {
+      vertical-align: middle;
+      margin-left: 6px;
+      margin-right: 2px;
+      opacity: 0.92;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(40px) scale(0.98); }
+      100% { opacity: 1; transform: none; }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <img class="app-icon" src="https://img.icons8.com/color/96/000000/source-code.png" alt="Web Challenge Icon" loading="lazy" />
-    <h1>مرحباً بك 👋</h1>
-    <p>تطبيق <b>تحدي الويب</b> هو منصة تفاعلية لاختبار وتطوير مهاراتك في البرمجة وتصميم المواقع.</p>
-    <p class="description">
-      التطبيق مبني باستخدام <b>Flutter</b> ويقدّم اختبارات تعليمية في <b>HTML</b> و<b>CSS</b> عبر أسئلة تفاعلية (صح/خطأ واختيار من متعدد). يتمتع بواجهة عربية أنيقة، يدعم الوضع الليلي، ويتيح لك تسجيل اسمك، متابعة نتائجك، ومراجعة إجاباتك. صُمم ليجعل التعلم ممتعًا وسهلًا.
-    </p>
-    <p>اضغط الزر لتحميل التطبيق على جهازك:</p>
-    <a class="btn-download" href="app-release.apk" download>📥 تحميل التطبيق</a>
-    <p class="file-size">حجم الملف: تقريبًا 20 ميجا</p>
+    <img class="app-icon" src="https://img.icons8.com/color/96/000000/source-code.png" alt="Web Challenge App" />
+
+    <h1><img src="https://img.icons8.com/emoji/32/000000/waving-hand.png" class="icon" />مرحباً بك</h1>
+    
+    <p>تطبيق <b>تحدي الويب</b> يساعدك على تطوير مهاراتك في البرمجة بأسلوب تفاعلي وممتع.</p>
+
+    <div class="description">
+      <p><img class="icon" src="https://img.icons8.com/color/24/code.png" /> تم تطويره باستخدام <b>Flutter</b></p>
+      <p><img class="icon" src="https://img.icons8.com/color/24/html-5--v1.png" /> اختبارات في <b>HTML</b> و<b>CSS</b></p>
+      <p><img class="icon" src="https://img.icons8.com/fluency/24/quiz.png" /> أسئلة: اختيار من متعدد / صح أو خطأ</p>
+      <p><img class="icon" src="https://img.icons8.com/emoji/24/moon-emoji.png" /> يدعم الوضع الليلي</p>
+      <p><img class="icon" src="https://img.icons8.com/color/24/name.png" /> حفظ اسم المستخدم والنتائج</p>
+    </div>
+
+    <p>⬇️ لتحميل التطبيق بصيغة APK:</p>
+    <a class="btn-download" href="app-release.apk" download>📲 تحميل التطبيق</a>
+    <p class="file-size">📦 الحجم التقريبي: 20 ميجا</p>
 
     <div class="author-info">
-      <p>برمجة وتطوير: <b>عيسى إبراهيم شايع</b></p>
+      <p>👨‍💻 برمجة: <b>عيسى إبراهيم شايع</b></p>
       <p>
-        🌐 موقعي: <a href="https://eissashaya.github.io/eissaa/" target="_blank">eissashaya.github.io/eissaa/</a><br>
-        📸 إنستجرام: <a href="https://instagram.com/3d_.td" target="_blank">@3d_.td</a>
+        🌐 <a href="https://eissashaya.github.io/eissaa/" target="_blank">موقعي الشخصي</a><br>
+        📸 <a href="https://instagram.com/3d_.td" target="_blank">@3d_.td على إنستجرام</a>
       </p>
     </div>
   </div>
