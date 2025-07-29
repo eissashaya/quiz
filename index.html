@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>تحميل تطبيق تحدي الويب</title>
+  <style>
+    body {
+      font-family: 'Cairo', 'Tajawal', 'Arial', sans-serif;
+      background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      direction: rtl;
+      overflow-x: hidden;
+    }
+
+    .container {
+      background: rgba(255,255,255,0.85);
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.13);
+      border-radius: 0;
+      padding: 56px 24px 44px 24px;
+      width: 100vw;
+      min-height: 100vh;
+      text-align: center;
+      backdrop-filter: blur(7px) saturate(120%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 1.2s ease both;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(40px) scale(0.98); }
+      100% { opacity: 1; transform: none; }
+    }
+
+    .app-icon {
+      width: 72px;
+      height: 72px;
+      margin-bottom: 18px;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(40,167,69,0.13);
+      object-fit: cover;
+      background: #e9f7ef;
+      border: 2.5px solid #28a74522;
+      animation: popIn 1s ease-out both;
+    }
+
+    @keyframes popIn {
+      0% { opacity: 0; transform: scale(0.7) rotate(-10deg); }
+      100% { opacity: 1; transform: none; }
+    }
+
+    h1 {
+      color: #28a745;
+      font-size: 2.25rem;
+      margin-bottom: 14px;
+      font-weight: 800;
+      text-shadow: 0 2px 8px #28a74511;
+    }
+
+    p {
+      color: #444;
+      font-size: 1.1rem;
+      margin-bottom: 18px;
+      line-height: 1.9;
+    }
+
+    .description {
+      background: #f3f6fa;
+      border-radius: 10px;
+      padding: 14px;
+      font-size: 0.99rem;
+      margin-bottom: 16px;
+      color: #333;
+    }
+
+    .btn-download {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 32px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(90deg, #28a745 60%, #218838 100%);
+      text-decoration: none;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(40, 167, 69, 0.13);
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-download::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, #b2f7ef33 0%, #e0eafc33 100%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      border-radius: 14px;
+      z-index: -1;
+    }
+
+    .btn-download:hover {
+      background: linear-gradient(90deg, #218838 60%, #28a745 100%);
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 8px 24px rgba(40, 167, 69, 0.18);
+    }
+
+    .btn-download:hover::before {
+      opacity: 1;
+    }
+
+    .file-size {
+      margin-top: 32px;
+      color: #6c757d;
+      font-size: 0.95rem;
+    }
+
+    .author-info {
+      margin-top: 48px;
+      color: #777;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      border-top: 1px solid #ddd;
+      padding-top: 16px;
+    }
+
+    .author-info b {
+      color: #333;
+    }
+
+    .author-info a {
+      color: #28a745;
+      text-decoration: none;
+    }
+
+    .author-info a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="app-icon" src="https://img.icons8.com/color/96/000000/source-code.png" alt="Web Challenge Icon" loading="lazy" />
+    <h1>مرحباً بك 👋</h1>
+    <p>تطبيق <b>تحدي الويب</b> هو منصة تفاعلية لاختبار وتطوير مهاراتك في البرمجة وتصميم المواقع.</p>
+    <p class="description">
+      التطبيق مبني باستخدام <b>Flutter</b> ويقدّم اختبارات تعليمية في <b>HTML</b> و<b>CSS</b> عبر أسئلة تفاعلية (صح/خطأ واختيار من متعدد). يتمتع بواجهة عربية أنيقة، يدعم الوضع الليلي، ويتيح لك تسجيل اسمك، متابعة نتائجك، ومراجعة إجاباتك. صُمم ليجعل التعلم ممتعًا وسهلًا.
+    </p>
+    <p>اضغط الزر لتحميل التطبيق على جهازك:</p>
+    <a class="btn-download" href="app-release.apk" download>📥 تحميل التطبيق</a>
+    <p class="file-size">حجم الملف: تقريبًا 20 ميجا</p>
+
+    <div class="author-info">
+      <p>برمجة وتطوير: <b>عيسى إبراهيم شايع</b></p>
+      <p>
+        🌐 موقعي: <a href="https://eissashaya.github.io/eissaa/" target="_blank">eissashaya.github.io/eissaa/</a><br>
+        📸 إنستجرام: <a href="https://instagram.com/3d_.td" target="_blank">@3d_.td</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
