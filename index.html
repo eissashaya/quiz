@@ -7,7 +7,7 @@
 
   <!-- تحسين محركات البحث -->
   <meta name="description" content="حمّل تطبيق تحدي الويب واختبر مهاراتك في HTML وCSS من خلال أسئلة تفاعلية بصيغة صح/خطأ واختيار من متعدد. يدعم اللغة العربية والوضع الليلي." />
-  <meta name="keywords" content="تطبيق برمجة, HTML, CSS, تعليم البرمجة, تحدي الويب, اختبارات تفاعلية, تعلم تصميم المواقع, Flutter, عيسى شايع" />
+  <meta name="keywords" content="تطبيق برمجة, HTML, CSS, تعليم البرمجة, تحدي الويب, اختبارات تفاعلية, تعلم تصميم المواقع, Flutter, عيسى شايع, تعليم الويب, تعلم CSS, تعلم HTML" />
   <meta name="author" content="عيسى إبراهيم شايع" />
   <meta name="robots" content="index, follow" />
 
@@ -24,10 +24,13 @@
   <meta name="twitter:description" content="جرب مهاراتك البرمجية عبر اختبارات ممتعة بتطبيق تحدي الويب." />
   <meta name="twitter:image" content="https://img.icons8.com/color/96/000000/source-code.png" />
 
-  <!-- الخط -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
+  <!-- تحميل الخط مع تحسين سرعة التحميل -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet" />
+
   <!-- أيقونة التبويب -->
-  <link rel="icon" href="https://img.icons8.com/color/48/000000/source-code.png" type="image/png">
+  <link rel="icon" href="https://img.icons8.com/color/48/000000/source-code.png" type="image/png" />
 
   <style>
     body {
@@ -81,6 +84,13 @@
       letter-spacing: 0.5px;
     }
 
+    h2 {
+      color: #3a7d44;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
     p {
       color: #444;
       font-size: 1.12rem;
@@ -96,6 +106,7 @@
       color: #333;
       border: none;
       box-shadow: 0 1.5px 8px #28a7450a;
+      text-align: right;
     }
 
     .btn-download {
@@ -112,6 +123,12 @@
       transition: all 0.3s ease;
       position: relative;
       z-index: 1;
+      outline-offset: 4px;
+    }
+
+    .btn-download:focus-visible {
+      outline: 3px solid #1e7e34;
+      outline-offset: 4px;
     }
 
     .btn-download::before {
@@ -125,13 +142,15 @@
       z-index: -1;
     }
 
-    .btn-download:hover {
+    .btn-download:hover,
+    .btn-download:focus {
       background: linear-gradient(90deg, #218838 60%, #28a745 100%);
       transform: translateY(-2px) scale(1.04);
       box-shadow: 0 8px 24px rgba(40, 167, 69, 0.18);
     }
 
-    .btn-download:hover::before {
+    .btn-download:hover::before,
+    .btn-download:focus::before {
       opacity: 1;
     }
 
@@ -148,6 +167,7 @@
       line-height: 1.8;
       border-top: 1px solid #ddd;
       padding-top: 16px;
+      text-align: center;
     }
 
     .author-info b {
@@ -159,7 +179,8 @@
       text-decoration: none;
     }
 
-    .author-info a:hover {
+    .author-info a:hover,
+    .author-info a:focus {
       text-decoration: underline;
     }
 
@@ -177,32 +198,34 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <img class="app-icon" src="https://img.icons8.com/color/96/000000/source-code.png" alt="Web Challenge App" />
+  <main class="container" role="main" aria-label="تطبيق تحدي الويب لتحسين مهارات البرمجة">
+    <img class="app-icon" src="https://img.icons8.com/color/96/000000/source-code.png" alt="أيقونة تطبيق تحدي الويب - رمز شفرة المصدر" />
 
-    <h1><img src="https://img.icons8.com/emoji/32/000000/waving-hand.png" class="icon" />مرحباً بك</h1>
-    
+    <h1><img src="https://img.icons8.com/emoji/32/000000/waving-hand.png" class="icon" alt="يد تلوح"/> مرحباً بك</h1>
+
+    <h2>اختبر مهاراتك في HTML وCSS بطريقة تفاعلية وممتعة</h2>
+
     <p>تطبيق <b>تحدي الويب</b> يساعدك على تطوير مهاراتك في البرمجة بأسلوب تفاعلي وممتع.</p>
 
-    <div class="description">
-      <p><img class="icon" src="https://img.icons8.com/color/24/code.png" /> تم تطويره باستخدام <b>Flutter</b></p>
-      <p><img class="icon" src="https://img.icons8.com/color/24/html-5--v1.png" /> اختبارات في <b>HTML</b> و<b>CSS</b></p>
-      <p><img class="icon" src="https://img.icons8.com/fluency/24/quiz.png" /> أسئلة: اختيار من متعدد / صح أو خطأ</p>
-      <p><img class="icon" src="https://img.icons8.com/emoji/24/moon-emoji.png" /> يدعم الوضع الليلي</p>
-      <p><img class="icon" src="https://img.icons8.com/color/24/name.png" /> حفظ اسم المستخدم والنتائج</p>
-    </div>
+    <section class="description" aria-label="مميزات التطبيق">
+      <p><img class="icon" src="https://img.icons8.com/color/24/code.png" alt="رمز Flutter" /> تم تطويره باستخدام <b>Flutter</b></p>
+      <p><img class="icon" src="https://img.icons8.com/color/24/html-5--v1.png" alt="شعار HTML5" /> اختبارات في <b>HTML</b> و<b>CSS</b></p>
+      <p><img class="icon" src="https://img.icons8.com/fluency/24/quiz.png" alt="رمز اختبار" /> أسئلة: اختيار من متعدد / صح أو خطأ</p>
+      <p><img class="icon" src="https://img.icons8.com/emoji/24/moon-emoji.png" alt="رمز القمر" /> يدعم الوضع الليلي</p>
+      <p><img class="icon" src="https://img.icons8.com/color/24/name.png" alt="رمز حفظ" /> حفظ اسم المستخدم والنتائج</p>
+    </section>
 
     <p>⬇️ لتحميل التطبيق بصيغة APK:</p>
-    <a class="btn-download" href="app-release.apk" download>📲 تحميل التطبيق</a>
-    <p class="file-size">📦 الحجم التقريبي: 20 ميجا</p>
+    <a class="btn-download" href="app-release.apk" download aria-label="تحميل تطبيق تحدي الويب بصيغة APK">📲 تحميل التطبيق</a>
+    <p class="file-size" aria-live="polite">📦 الحجم التقريبي: 20 ميجا</p>
 
-    <div class="author-info">
+    <footer class="author-info" role="contentinfo">
       <p>👨‍💻 برمجة: <b>عيسى إبراهيم شايع</b></p>
       <p>
-        🌐 <a href="https://eissashaya.github.io/eissaa/" target="_blank">موقعي الشخصي</a><br>
-        📸 <a href="https://instagram.com/3d_.td" target="_blank">@3d_.td على إنستجرام</a>
+        🌐 <a href="https://eissashaya.github.io/eissaa/" target="_blank" rel="noopener noreferrer" aria-label="زيارة الموقع الشخصي لعيسى شايع">eissashaya.github.io/eissaa موقعي الشخصي</a><br />
+        📸 <a href="https://instagram.com/3d_.td" target="_blank" rel="noopener noreferrer" aria-label="زيارة حساب إنستجرام 3d_.td">@3d_.td على إنستجرام</a>
       </p>
-    </div>
-  </div>
+    </footer>
+  </main>
 </body>
 </html>
