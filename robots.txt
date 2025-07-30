@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eissashaya.github.io/quiz/sitemap.xml
